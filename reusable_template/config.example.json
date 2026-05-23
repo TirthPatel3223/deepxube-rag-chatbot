@@ -1,0 +1,30 @@
+{
+  "_comment_repo_root": "Path to the target project's root, relative to this config file. All scope paths are relative to repo_root.",
+  "repo_root": "../deepxube-main",
+
+  "_comment_docs_root": "Where to emit generated docs, relative to this config file.",
+  "docs_root": "../deepxube-main/docs",
+
+  "_comment_scope": "Choose EXACTLY ONE of scope_file | scope | auto_discover.",
+
+  "scope_file": "poc_scope.txt",
+
+  "scope_EXAMPLE": [
+    "myproject/core/foo.py",
+    "myproject/util.py"
+  ],
+
+  "auto_discover_EXAMPLE": {
+    "root": "myproject",
+    "exclude": ["**/__init__.py", "**/tests/**", "**/migrations/**"]
+  },
+
+  "_comment_factory_patterns": "If the project uses factory-style registries (like DeepXube's @updater_factory.register_class('key')), configure how they look. Each pattern says: 'a decorator call whose attribute is this method_name counts as a registration'. Leave the defaults if your project uses .register_class(). Set to [] if the project has no factory pattern.",
+  "factory_registration_patterns": [
+    {"method_name": "register_class", "kind_label": "register_class"},
+    {"method_name": "register_parser", "kind_label": "register_parser"}
+  ],
+
+  "_comment_factory_instances": "How to detect factory instance declarations. Default matches `foo: Factory[Bar] = Factory[Bar]('...')`. Each string is a prefix of the type annotation.",
+  "factory_instance_annotation_prefixes": ["Factory["]
+}

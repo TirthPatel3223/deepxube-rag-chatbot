@@ -1,0 +1,89 @@
+# Factory `domain_factory` — class hierarchy
+
+Every concrete class registered with `deepxube.factories.domain_factory.domain_factory` plus all their in-scope abstract ancestors. 5 registered class(es), 27 classes total in the diagram.
+
+Arrow: **base → subclass**. Abstract classes as circles. Square brackets: factory key.
+
+```mermaid
+graph TD
+    N8077608(("ActsEnum (abstract)"))
+    N89984954(("ActsEnumFixed (abstract)"))
+    N57926373(("ActsFixed (abstract)"))
+    N31690720(("ActsRev (abstract)"))
+    N78044518(("Domain (abstract)"))
+    N9102405(("GoalSampleableFromState (abstract)"))
+    N14093898(("GoalStartRevWalkable (abstract)"))
+    N24932674(("GoalStartRevWalkableActsRev (abstract)"))
+    N42426192(("GoalStateGoalPairSampleable (abstract)"))
+    N78038273(("NextStateNP (abstract)"))
+    N68783430(("NextStateNPActsEnum (abstract)"))
+    N68779947(("NextStateNPActsEnumFixed (abstract)"))
+    N87099864(("StartGoalWalkable (abstract)"))
+    N34542177(("StateGoalVizable (abstract)"))
+    N19564684(("StringToAct (abstract)"))
+    N24865476(("DynamicNNetInput (abstract)"))
+    N81842938(("HasActsEnumFixedIn (abstract)"))
+    N30824659(("HasFlatSGAIn (abstract)"))
+    N86687252(("HasFlatSGActsEnumFixedIn (abstract)"))
+    N2790674(("HasFlatSGIn (abstract)"))
+    N34590139(("HasTwoDSGActsEnumFixedIn (abstract)"))
+    N25464434(("HasTwoDSGIn (abstract)"))
+    N69905520["Cube3<br/>[cube3]"]
+    N69020371["Grid<br/>[grid]"]
+    N71924599["LightsOut<br/>[lightsout]"]
+    N57875219["NPuzzle<br/>[npuzzle]"]
+    N30205305["Sokoban<br/>[sokoban]"]
+    N78044518 --> N8077608
+    N8077608 --> N89984954
+    N57926373 --> N89984954
+    N78044518 --> N57926373
+    N78044518 --> N31690720
+    N78044518 --> N9102405
+    N42426192 --> N14093898
+    N14093898 --> N24932674
+    N31690720 --> N24932674
+    N78044518 --> N42426192
+    N78044518 --> N78038273
+    N78038273 --> N68783430
+    N8077608 --> N68783430
+    N68783430 --> N68779947
+    N89984954 --> N68779947
+    N9102405 --> N87099864
+    N78044518 --> N34542177
+    N78044518 --> N19564684
+    N78044518 --> N24865476
+    N78044518 --> N81842938
+    N24865476 --> N30824659
+    N2790674 --> N86687252
+    N81842938 --> N86687252
+    N24865476 --> N2790674
+    N25464434 --> N34590139
+    N81842938 --> N34590139
+    N24865476 --> N25464434
+    N68779947 --> N69905520
+    N24932674 --> N69905520
+    N86687252 --> N69905520
+    N30824659 --> N69905520
+    N34542177 --> N69905520
+    N19564684 --> N69905520
+    N89984954 --> N69020371
+    N87099864 --> N69020371
+    N34542177 --> N69020371
+    N19564684 --> N69020371
+    N86687252 --> N69020371
+    N30824659 --> N69020371
+    N68779947 --> N71924599
+    N24932674 --> N71924599
+    N86687252 --> N71924599
+    N30824659 --> N71924599
+    N34590139 --> N71924599
+    N89984954 --> N57875219
+    N24932674 --> N57875219
+    N2790674 --> N57875219
+    N34542177 --> N57875219
+    N19564684 --> N57875219
+    N89984954 --> N30205305
+    N87099864 --> N30205305
+    N34542177 --> N30205305
+    N19564684 --> N30205305
+```

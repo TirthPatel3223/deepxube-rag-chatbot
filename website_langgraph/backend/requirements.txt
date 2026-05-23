@@ -1,0 +1,40 @@
+# ============================================================================
+# DeepXube RAG Chatbot - Backend Dependencies
+# ============================================================================
+# Install: pip install -r requirements.txt
+# ============================================================================
+
+# --- Web Framework ---
+fastapi>=0.115.0
+uvicorn[standard]>=0.34.0
+
+# --- LangGraph / LangChain ---
+langgraph>=0.4.0
+langchain-core>=0.3.50
+
+# --- LLM Providers ---
+openai>=1.75.0
+anthropic>=0.49.0
+
+# --- Vector Database ---
+chromadb>=0.6.0
+
+# --- Graph Processing ---
+networkx>=3.4
+
+# --- PDF Processing ---
+PyMuPDF>=1.25.0
+
+# --- Rate Limiting ---
+slowapi>=0.1.9
+
+# --- Tokenization (for chunking) ---
+tiktoken>=0.9.0
+
+# --- Utilities ---
+python-dotenv>=1.0.0
+pydantic>=2.10.0
+pydantic-settings>=2.7.0
+
+# --- YAML parsing (for .md frontmatter) ---
+pyyaml>=6.0

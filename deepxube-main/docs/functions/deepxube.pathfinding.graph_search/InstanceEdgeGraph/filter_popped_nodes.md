@@ -1,0 +1,76 @@
+---
+id: "func:deepxube.pathfinding.graph_search.InstanceEdgeGraph.filter_popped_nodes"
+kind: "method"
+name: "filter_popped_nodes"
+qualified_name: "deepxube.pathfinding.graph_search.InstanceEdgeGraph.filter_popped_nodes"
+module: "deepxube.pathfinding.graph_search"
+file: "deepxube/pathfinding/graph_search.py"
+line_start: 167
+line_end: 169
+class: "InstanceEdgeGraph"
+visibility: "public"
+is_abstract: false
+is_generator: false
+is_async: false
+decorators: []
+parameters:
+  - name: "self"
+    annotation: null
+    default: null
+  - name: "nodes"
+    annotation: "List[Node]"
+    default: null
+returns: "List[Node]"
+docstring_source: "present"
+callees:
+  - target: "func:deepxube.pathfinding.graph_search.InstanceEdgeGraph._check_closed"
+    expr: "self._check_closed"
+    call_sites: [169]
+raises: []
+reads_attrs: []
+writes_attrs: []
+---
+
+# `deepxube.pathfinding.graph_search.InstanceEdgeGraph.filter_popped_nodes`
+
+**File:** [deepxube/pathfinding/graph_search.py:167](../../../../deepxube/pathfinding/graph_search.py#L167)
+**Class:** `InstanceEdgeGraph`
+**Visibility:** public
+**Kind:** method
+
+## Signature
+
+```python
+def filter_popped_nodes(self, nodes: List[Node]) -> List[Node]
+```
+
+## Docstring
+
+Filter popped nodes through the closed dict. 
+
+## Parameters
+
+| Name | Type | Default |
+|------|------|---------|
+| `self` | — | — |
+| `nodes` | `List[Node]` | — |
+
+## Returns
+
+`List[Node]`
+
+## Calls
+
+- `self._check_closed` → `func:deepxube.pathfinding.graph_search.InstanceEdgeGraph._check_closed` (lines: 169)
+
+## Called by
+
+*(See `graph.json` for reverse edges; placeholder filled by graph post-pass.)*
+
+## Source
+
+```python
+    def filter_popped_nodes(self, nodes: List[Node]) -> List[Node]:
+        """ Filter popped nodes through the closed dict. """
+        return self._check_closed(nodes)
+```

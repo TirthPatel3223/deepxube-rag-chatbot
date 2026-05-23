@@ -1,0 +1,15 @@
+{
+  "_comment": "Smoke test — points the generalized extractor at DeepXube to prove it produces the same output as the DeepXube-specific version.",
+  "repo_root": "../deepxube-main",
+  "docs_root": "./smoketest_out",
+  "scope": [
+    "deepxube/base/updater.py",
+    "deepxube/updaters/updater_v_rl.py",
+    "deepxube/factories/updater_factory.py",
+    "deepxube/base/factory.py"
+  ],
+  "factory_registration_patterns": [
+    {"method_name": "register_class", "kind_label": "register_class"}
+  ],
+  "factory_instance_annotation_prefixes": ["Factory["]
+}

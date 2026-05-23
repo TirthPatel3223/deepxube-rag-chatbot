@@ -1,0 +1,16 @@
+# Factory `policy_factory` — class hierarchy
+
+Every concrete class registered with `deepxube.factories.heuristic_factory.policy_factory` plus all their in-scope abstract ancestors. 1 registered class(es), 4 classes total in the diagram.
+
+Arrow: **base → subclass**. Abstract classes as circles. Square brackets: factory key.
+
+```mermaid
+graph TD
+    N69358262(("DeepXubeNNet (abstract)"))
+    N96179416(("PolicyNNet (abstract)"))
+    N20942029(("PolicyVAE (abstract)"))
+    N94520988["ResnetFCPolicy<br/>[resnet_fc]"]
+    N69358262 --> N96179416
+    N96179416 --> N20942029
+    N20942029 --> N94520988
+```

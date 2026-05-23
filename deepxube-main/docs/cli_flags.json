@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-04-26T04:41:58.952326+00:00",
+  "poc_note": "This POC output contains only factory keys extracted from @factory.register_class decorators. Full CLI flag extraction from _train_cli.py / _solve.py / _cli.py happens when those files are added to scope.",
+  "flags": [],
+  "factories": [
+    {
+      "id": "factory:deepxube.factories.domain_factory.domain_factory",
+      "name": "domain_factory",
+      "module": "deepxube.factories.domain_factory",
+      "class_type": "Domain",
+      "registered_keys": [
+        "cube3",
+        "grid",
+        "lightsout",
+        "npuzzle",
+        "sokoban"
+      ],
+      "key_to_class": {
+        "cube3": "class:deepxube.domains.cube3.Cube3",
+        "grid": "class:deepxube.domains.grid.Grid",
+        "lightsout": "class:deepxube.domains.lightsout.LightsOut",
+        "npuzzle": "class:deepxube.domains.npuzzle.NPuzzle",
+        "sokoban": "class:deepxube.domains.sokoban.Sokoban"
+      }
+    },
+    {
+      "id": "factory:deepxube.factories.heuristic_factory.heuristic_factory",
+      "name": "heuristic_factory",
+      "module": "deepxube.factories.heuristic_factory",
+      "class_type": "HeurNNet",
+      "registered_keys": [
+        "resnet_2d",
+        "resnet_fc",
+        "gridnet"
+      ],
+      "key_to_class": {
+        "resnet_2d": "class:deepxube.heuristics.resnet_2d.Resnet2D",
+        "resnet_fc": "class:deepxube.heuristics.resnet_fc.ResnetFCHeur",
+        "gridnet": "class:deepxube.domains.grid.GridNet"
+      }
+    },
+    {
+      "id": "factory:deepxube.factories.heuristic_factory.policy_factory",
+      "name": "policy_factory",
+      "module": "deepxube.factories.heuristic_factory",
+      "class_type": "PolicyNNet",
+      "registered_keys": [
+        "resnet_fc"
+      ],
+      "key_to_class": {
+        "resnet_fc": "class:deepxube.heuristics.resnet_fc.ResnetFCPolicy"
+      }
+    },
+    {
+      "id": "factory:deepxube.factories.pathfinding_factory.pathfinding_factory",
+      "name": "pathfinding_factory",
+      "module": "deepxube.factories.pathfinding_factory",
+      "class_type": "PathFind",
+      "registered_keys": [
+        "beam_p",
+        "beam_v",
+        "beam_q",
+        "beam_v_p",
+        "beam_q_p",
+        "graph_v",
+        "graph_q",
+        "graph_v_p",
+        "graph_q_p",
+        "sup_q_rw",
+        "sup_q_rw_rev",
+        "sup_v_rw",
+        "sup_v_rw_rev"
+      ],
+      "key_to_class": {
+        "beam_p": "class:deepxube.pathfinding.beam_search.BeamSearchPolicy",
+        "beam_v": "class:deepxube.pathfinding.beam_search.BeamSearchHeurNodeActsEnum",
+        "beam_q": "class:deepxube.pathfinding.beam_search.BeamSearchHeurEdgeActsEnum",
+        "beam_v_p": "class:deepxube.pathfinding.beam_search.BeamSearchHeurNodeActsPolicy",
+        "beam_q_p": "class:deepxube.pathfinding.beam_search.BeamSearchHeurEdgeActsPolicy",
+        "graph_v": "class:deepxube.pathfinding.graph_search.GraphSearchHeurNodeActsEnum",
+        "graph_q": "class:deepxube.pathfinding.graph_search.GraphSearchHeurEdgeActsEnum",
+        "graph_v_p": "class:deepxube.pathfinding.graph_search.GraphSearchHeurNodeActsPolicy",
+        "graph_q_p": "class:deepxube.pathfinding.graph_search.GraphSearchHeurEdgeActsPolicy",
+        "sup_q_rw": "class:deepxube.pathfinding.supervised_q.PathFindEdgeSupRW",
+        "sup_q_rw_rev": "class:deepxube.pathfinding.supervised_q.PathFindEdgeSupRWRev",
+        "sup_v_rw": "class:deepxube.pathfinding.supervised_v.PathFindNodeSupRW",
+        "sup_v_rw_rev": "class:deepxube.pathfinding.supervised_v.PathFindNodeSupRWRev"
+      }
+    },
+    {
+      "id": "factory:deepxube.factories.updater_factory.updater_factory",
+      "name": "updater_factory",
+      "module": "deepxube.factories.updater_factory",
+      "class_type": "Update",
+      "registered_keys": [
+        "update_policy_sup",
+        "update_heurv_sup",
+        "update_heurq_sup",
+        "update_v_rl",
+        "update_v_rl_her",
+        "update_v_p_rl",
+        "update_v_p_rl_her",
+        "update_q_rl",
+        "update_q_rl_her",
+        "update_q_p_rl",
+        "update_q_p_rl_her",
+        "update_p_rl",
+        "update_p_rl_her",
+        "update_p_v_rl",
+        "update_p_v_rl_her",
+        "update_p_q_rl",
+        "update_p_q_rl_her"
+      ],
+      "key_to_class": {
+        "update_policy_sup": "class:deepxube.updaters.updater_sup.UpdatePolicySup",
+        "update_heurv_sup": "class:deepxube.updaters.updater_sup.UpdateHeurVSup",
+        "update_heurq_sup": "class:deepxube.updaters.updater_sup.UpdateHeurQSup",
+        "update_v_rl": "class:deepxube.updaters.updater_v_rl.UpdateHeurVRLKeepGoal",
+        "update_v_rl_her": "class:deepxube.updaters.updater_v_rl.UpdateHeurVRLHER",
+        "update_v_p_rl": "class:deepxube.updaters.updater_v_rl.UpdateHeurVRLKeepGoalPolicy",
+        "update_v_p_rl_her": "class:deepxube.updaters.updater_v_rl.UpdateHeurVRLHERPolicy",
+        "update_q_rl": "class:deepxube.updaters.updater_q_rl.UpdateHeurQRLKeepGoal",
+        "update_q_rl_her": "class:deepxube.updaters.updater_q_rl.UpdateHeurQRLHER",
+        "update_q_p_rl": "class:deepxube.updaters.updater_q_rl.UpdateHeurQRLKeepGoalPolicy",
+        "update_q_p_rl_her": "class:deepxube.updaters.updater_q_rl.UpdateHeurQRLHERPolicy",
+        "update_p_rl": "class:deepxube.updaters.updater_policy_rl.UpdatePolicyRLKeepGoal",
+        "update_p_rl_her": "class:deepxube.updaters.updater_policy_rl.UpdatePolicyRLHER",
+        "update_p_v_rl": "class:deepxube.updaters.updater_policy_rl.UpdatePolicyRLKeepGoalHeurV",
+        "update_p_v_rl_her": "class:deepxube.updaters.updater_policy_rl.UpdatePolicyRLHERHeurV",
+        "update_p_q_rl": "class:deepxube.updaters.updater_policy_rl.UpdatePolicyRLKeepGoalHeurQ",
+        "update_p_q_rl_her": "class:deepxube.updaters.updater_policy_rl.UpdatePolicyRLHERHeurQ"
+      }
+    }
+  ],
+  "dispatch_rules": [
+    {
+      "target_factory": "deepxube.factories.updater_factory.updater_factory",
+      "predicate_fn": "deepxube.factories.updater_factory.get_updater",
+      "inputs": [
+        "domain",
+        "pathfind_arg",
+        "her",
+        "func_update"
+      ],
+      "rule_summary": "Filters updater_factory registry by: (1) domain_type match via isinstance, (2) pathfind_type match via issubclass, (3) UpdateHER subclass == her bool, (4) functions_type equals pathfind's functions_type, (5) UpdateHeur or UpdatePolicy subclass per func_update arg. Must resolve to exactly one class."
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+# Factory `pathfinding_factory` — class hierarchy
+
+Every concrete class registered with `deepxube.factories.pathfinding_factory.pathfinding_factory` plus all their in-scope abstract ancestors. 13 registered class(es), 30 classes total in the diagram.
+
+Arrow: **base → subclass**. Abstract classes as circles. Square brackets: factory key.
+
+```mermaid
+graph TD
+    N30429494(("PathFind (abstract)"))
+    N59444724(("PathFindActsEnum (abstract)"))
+    N23366008(("PathFindActsPolicy (abstract)"))
+    N36349682(("PathFindEdge (abstract)"))
+    N21465313(("PathFindNode (abstract)"))
+    N37113864(("PathFindSetHeurQ (abstract)"))
+    N48047046(("PathFindSetHeurV (abstract)"))
+    N56648627(("PathFindSetPolicy (abstract)"))
+    N46160466(("PathFindSup (abstract)"))
+    N20583033(("BeamSearch (abstract)"))
+    N94487710(("BeamSearchHeurEdge (abstract)"))
+    N57125355["BeamSearchHeurEdgeActsEnum<br/>[beam_q]"]
+    N28978428["BeamSearchHeurEdgeActsPolicy<br/>[beam_q_p]"]
+    N197538(("BeamSearchHeurNode (abstract)"))
+    N209009["BeamSearchHeurNodeActsEnum<br/>[beam_v]"]
+    N54908993["BeamSearchHeurNodeActsPolicy<br/>[beam_v_p]"]
+    N7740293["BeamSearchPolicy<br/>[beam_p]"]
+    N92965722(("GraphSearch (abstract)"))
+    N54958057(("GraphSearchHeurEdge (abstract)"))
+    N37459942["GraphSearchHeurEdgeActsEnum<br/>[graph_q]"]
+    N82483977["GraphSearchHeurEdgeActsPolicy<br/>[graph_q_p]"]
+    N89556317(("GraphSearchHeurNode (abstract)"))
+    N92126855["GraphSearchHeurNodeActsEnum<br/>[graph_v]"]
+    N30174224["GraphSearchHeurNodeActsPolicy<br/>[graph_v_p]"]
+    N33841361(("PathFindEdgeSup (abstract)"))
+    N36115928["PathFindEdgeSupRW<br/>[sup_q_rw]"]
+    N97723616["PathFindEdgeSupRWRev<br/>[sup_q_rw_rev]"]
+    N31771120(("PathFindNodeSup (abstract)"))
+    N8209242["PathFindNodeSupRW<br/>[sup_v_rw]"]
+    N70757406["PathFindNodeSupRWRev<br/>[sup_v_rw_rev]"]
+    N30429494 --> N59444724
+    N30429494 --> N23366008
+    N30429494 --> N36349682
+    N30429494 --> N21465313
+    N30429494 --> N37113864
+    N30429494 --> N48047046
+    N30429494 --> N56648627
+    N30429494 --> N46160466
+    N30429494 --> N20583033
+    N20583033 --> N94487710
+    N36349682 --> N94487710
+    N37113864 --> N94487710
+    N94487710 --> N57125355
+    N59444724 --> N57125355
+    N94487710 --> N28978428
+    N23366008 --> N28978428
+    N20583033 --> N197538
+    N21465313 --> N197538
+    N48047046 --> N197538
+    N197538 --> N209009
+    N59444724 --> N209009
+    N197538 --> N54908993
+    N23366008 --> N54908993
+    N20583033 --> N7740293
+    N36349682 --> N7740293
+    N23366008 --> N7740293
+    N56648627 --> N7740293
+    N30429494 --> N92965722
+    N92965722 --> N54958057
+    N36349682 --> N54958057
+    N37113864 --> N54958057
+    N54958057 --> N37459942
+    N59444724 --> N37459942
+    N54958057 --> N82483977
+    N23366008 --> N82483977
+    N92965722 --> N89556317
+    N21465313 --> N89556317
+    N48047046 --> N89556317
+    N89556317 --> N92126855
+    N59444724 --> N92126855
+    N89556317 --> N30174224
+    N23366008 --> N30174224
+    N36349682 --> N33841361
+    N46160466 --> N33841361
+    N33841361 --> N36115928
+    N33841361 --> N97723616
+    N21465313 --> N31771120
+    N46160466 --> N31771120
+    N31771120 --> N8209242
+    N31771120 --> N70757406
+```

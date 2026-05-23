@@ -1,0 +1,18 @@
+# Factory `heuristic_factory` — class hierarchy
+
+Every concrete class registered with `deepxube.factories.heuristic_factory.heuristic_factory` plus all their in-scope abstract ancestors. 3 registered class(es), 5 classes total in the diagram.
+
+Arrow: **base → subclass**. Abstract classes as circles. Square brackets: factory key.
+
+```mermaid
+graph TD
+    N69358262(("DeepXubeNNet (abstract)"))
+    N34085426(("HeurNNet (abstract)"))
+    N59880803["GridNet<br/>[gridnet]"]
+    N45786205["Resnet2D<br/>[resnet_2d]"]
+    N21501183["ResnetFCHeur<br/>[resnet_fc]"]
+    N69358262 --> N34085426
+    N34085426 --> N59880803
+    N34085426 --> N45786205
+    N34085426 --> N21501183
+```

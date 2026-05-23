@@ -1,0 +1,74 @@
+# Full codebase scope. One file per line. Paths relative to deepxube-main/.
+# __init__.py files are skipped entirely (re-export-only per triviality rule).
+
+# Module 1: updaters/
+deepxube/updaters/updater_sup.py
+deepxube/updaters/updater_v_rl.py
+deepxube/updaters/updater_q_rl.py
+deepxube/updaters/updater_policy_rl.py
+deepxube/updaters/utils/replay_buffer_utils.py
+
+# Module 2: utils/
+deepxube/utils/command_line_utils.py
+deepxube/utils/data_utils.py
+deepxube/utils/misc_utils.py
+deepxube/utils/timing_utils.py
+
+# Module 3: base/
+deepxube/base/domain.py
+deepxube/base/factory.py
+deepxube/base/heuristic.py
+deepxube/base/nnet_input.py
+deepxube/base/pathfinding.py
+deepxube/base/trainer.py
+deepxube/base/updater.py
+
+# Module 4: factories/
+deepxube/factories/domain_factory.py
+deepxube/factories/heuristic_factory.py
+deepxube/factories/nnet_input_factory.py
+deepxube/factories/pathfinding_factory.py
+deepxube/factories/updater_factory.py
+deepxube/factories/utils/import_modules.py
+
+# Module 5: heuristics/ + nnet/
+deepxube/heuristics/resnet_2d.py
+deepxube/heuristics/resnet_fc.py
+deepxube/nnet/nnet_utils.py
+deepxube/nnet/pytorch_models.py
+
+# Module 6: pathfinding/
+deepxube/pathfinding/beam_search.py
+deepxube/pathfinding/graph_search.py
+deepxube/pathfinding/supervised_q.py
+deepxube/pathfinding/supervised_v.py
+deepxube/pathfinding/utils/performance.py
+
+# Module 7: logic/
+deepxube/logic/asp.py
+deepxube/logic/logic_objects.py
+deepxube/logic/logic_utils.py
+
+# Module 8: trainers/
+deepxube/trainers/train_heur.py
+deepxube/trainers/train_policy.py
+deepxube/trainers/utils/train_loop.py
+deepxube/trainers/utils/train_utils.py
+
+# Module 9: domains/
+deepxube/domains/cube3.py
+deepxube/domains/grid.py
+deepxube/domains/lightsout.py
+deepxube/domains/npuzzle.py
+deepxube/domains/sokoban.py
+
+# Module 10: entry points
+deepxube/__main__.py
+deepxube/_cli.py
+deepxube/_solve.py
+deepxube/_train_cli.py
+
+# Module 11: tests/
+deepxube/tests/time_tests.py
+tests/test_domains.py
+tests/test_train_solve.py
