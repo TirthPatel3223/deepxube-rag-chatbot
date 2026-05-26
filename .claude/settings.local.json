@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(python docs/extractor/extract.py --scope docs/extractor/poc_scope.txt)",
-      "Bash(python -c ' *)"
-    ]
-  }
-}
